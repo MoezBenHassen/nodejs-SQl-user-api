@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 
 var corOptions = {
-    origin: 'https://localhost:8081'
+    origin: '*'
 }
 
 
@@ -15,8 +15,8 @@ app.use(express.urlencoded( {extended: true} ));
 
 
 // Routers
-const router = require('./routes/productRouter.js');
-app.use('/api/products', router);
+const router = require('./routes/userRouter.js');
+app.use('/api/users', router);
     //other router examples
 //app.use('/api/comments', router);
 
